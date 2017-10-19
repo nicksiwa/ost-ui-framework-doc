@@ -1,0 +1,23 @@
+html {
+    font-family: $font-family;
+}
+
+body {
+    overflow-y: auto;
+}
+
+.heading {
+    font-weight: lighter;
+    font-size: 50px;
+}
+
+.content {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        overflow: visible;
+    }
+}

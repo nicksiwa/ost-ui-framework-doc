@@ -1,0 +1,38 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+
+    $infix: $breakpoint;
+    $width: map-get($grid-breakpoints, $breakpoint);
+
+    @media only screen and (min-width: $width) {
+        @for $i from 1 through $grid-columns {
+            .col-#{$infix}-#{$i} {
+                width: 100% / 12 * $i;
+            }
+        }
+    }
+}
