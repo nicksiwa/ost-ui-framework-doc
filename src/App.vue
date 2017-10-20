@@ -8,11 +8,11 @@
         </div>
         <div class="sidenav__link">
           <ul>
-            <li><router-link to="/button">Button</router-link></li>
-            <li><router-link to="/table">Table</router-link></li>
-            <li><router-link to="/form">Form</router-link></li>
-            <li><router-link to="/list">List</router-link></li>
-            <li><router-link to="/navbar">Navbar</router-link></li>
+            <router-link tag="li" to="/button"><a>Button</a></router-link>
+            <router-link tag="li" to="/table"><a>Table</a></router-link>
+            <router-link tag="li" to="/form"><a>Form</a></router-link>
+            <router-link tag="li" to="/list"><a>List</a></router-link>
+            <router-link tag="li" to="/navbar"><a>Navbar</a></router-link>
           </ul>
         </div>
       </div>

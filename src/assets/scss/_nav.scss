@@ -68,7 +68,7 @@
         ul {
             list-style: none;
             li {
-                &.active {
+                &.router-link-active {
                     a {
                         color: darken($font-color, 20%);
                         font-weight: bold;
