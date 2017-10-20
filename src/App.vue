@@ -4,9 +4,9 @@
       <div class="sidenav col-lg-2 col-md-3">
         <div class="sidenav__head">
           <router-link to="/">Logo</router-link>
-          <button v-on:click="show = !show" class="toggle"><i class="fa fa-bars"></i></button>
+          <a class="toggle" @click="collapsed = !collapsed"><i class="fa fa-bars"></i></a>
         </div>
-        <div class="sidenav__link">
+        <div class="sidenav__link" v-bind:class="{'is-collapsed' : collapsed}">
           <ul>
             <router-link tag="li" to="/button"><a>Button</a></router-link>
             <router-link tag="li" to="/table"><a>Table</a></router-link>
@@ -25,7 +25,12 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      collapsed: true
+    }
+  }
 }
 </script>
 
@@ -34,5 +39,9 @@ export default {
 @import "assets/font/open-sans/open-sans.css";
 @import "assets/icon/font-awesome-4.7.0/css/font-awesome.min.css";
 @import "assets/scss/style.scss";
+
+.is-collapsed {
+    display: block !important;
+}
 </style>
 

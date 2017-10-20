@@ -1,7 +1,5 @@
 <template>
-  <div id="button">
-    <h1 class="heading">{{ msg }}</h1>
-  </div>
+  <h1 class="heading">{{ msg }}</h1>
 </template>
 
 <script>

@@ -86,19 +86,13 @@
                 }
             }
         }
-        &.--show {
-            
-        }
-        &.--hide {
-
-        }
     }
 }
 
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 768px) {
     .sidenav {
         &__link {
-            display: block !important;
+            display: block;
         }
     }
 }
