@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueHighlightJS from 'vue-highlightjs'
 
+Vue.use(VueHighlightJS)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

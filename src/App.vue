@@ -6,7 +6,7 @@
           <router-link to="/">Logo</router-link>
           <a class="toggle" @click="collapsed = !collapsed"><i class="fa fa-bars"></i></a>
         </div>
-        <div class="sidenav__link" v-bind:class="{'is-collapsed' : collapsed}">
+        <div class="sidenav__link" v-bind:class="{'is-collapsed' : !collapsed}">
           <ul>
             <router-link tag="li" to="/button"><a>Button</a></router-link>
             <router-link tag="li" to="/table"><a>Table</a></router-link>
@@ -34,11 +34,15 @@ export default {
 }
 </script>
 
-
 <style lang="scss">
 @import "assets/font/open-sans/open-sans.css";
 @import "assets/icon/font-awesome-4.7.0/css/font-awesome.min.css";
 @import "assets/scss/style.scss";
+@import "assets/style/highlight.js/bootstrap.css";
+
+pre > code {
+    font-family: Monaco,Consolas,"Courier New",monospace;
+}
 
 .is-collapsed {
     display: block !important;
